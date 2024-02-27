@@ -171,27 +171,27 @@ button {
 
 .track-item:nth-child(1)::after{
   background-color: var(--color-orange);
-  background-image: url(/images/icon-work.svg);
+  background-image: url(src/images/icon-work.svg);
 }
 .track-item:nth-child(2)::after{
   background-color: var(--color-light-blue);
-  background-image: url(/images/icon-play.svg);
+  background-image: url(src/images/icon-play.svg);
 }
 .track-item:nth-child(3)::after{
   background-color: var(--color-red);
-  background-image: url(/images/icon-study.svg);
+  background-image: url(src/images/icon-study.svg);
 }
 .track-item:nth-child(4)::after{
   background-color: var(--color-green);
-  background-image: url(/images/icon-exercise.svg);
+  background-image: url(src/images/icon-exercise.svg);
 }
 .track-item:nth-child(5)::after{
   background-color: var(--color-purple);
-  background-image: url(/images/icon-social.svg);
+  background-image: url(src/images/icon-social.svg);
 }
 .track-item:nth-child(6)::after{
   background-color: var(--color-yellow);
-  background-image: url(/images/icon-self-care.svg);
+  background-image: url(src/images/icon-self-care.svg);
 }
 
 
@@ -238,6 +238,35 @@ button {
     margin: 0 0.5em;
     max-width: calc(33.33% - 1em);
   }
+}
 
 
+.track-item:nth-child(1) svg.active{
+  fill: var(--color-orange);
+}
+.track-item:nth-child(2) svg.active{
+  fill: var(--color-light-blue);
+}
+.track-item:nth-child(3) svg.active{
+  fill: var(--color-red);
+}
+.track-item:nth-child(4) svg.active{
+  fill: var(--color-green);
+}
+.track-item:nth-child(5) svg.active{
+  fill: var(--color-purple);
+}
+.track-item:nth-child(6) svg.active{
+  fill: var(--color-yellow);
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#workTitle {
+  display: flex;
+  align-items: center;
 }
