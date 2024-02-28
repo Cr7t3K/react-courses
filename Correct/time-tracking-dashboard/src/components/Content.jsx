@@ -1,20 +1,17 @@
 import Item from "./Item.jsx";
-import datas from "../data.json"
-import PropTypes from "prop-types";
+import { useTimeTrackingContext} from "../contexts/TimeTrackingContext.jsx";
 
-export default function Content({ currentTimeFrame }) {
+export default function Content() {
+    const { datas, currentTimeFrame } = useTimeTrackingContext();
+
     return (
         <div className="tracks">
             {datas.map((data) => (
                 <Item key={data.id}
-                      currenTimeFrame={currentTimeFrame}
+                      currentTimeFrame={currentTimeFrame}
                       {...data}
                 />
             ))}
         </div>
     );
-}
-
-Content.propTypes = {
-    currentTimeFrame: PropTypes.oneOf(["daily", "weekly", "monthly"]).isRequired
 }

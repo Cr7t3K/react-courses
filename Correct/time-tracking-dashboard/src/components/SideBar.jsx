@@ -1,17 +1,12 @@
 import Profile from "./Profile.jsx";
 import Nav from "./Nav.jsx";
-import PropTypes from "prop-types";
 
-export default function SideBar({ setCurrentTimeFrame, currentTimeFrame }) {
+
+export default function SideBar() {
     return (
         <div className="sidebar">
-            <Profile firstName="John" lastName="Doe" avatar="src/images/image-jeremy.png" />
-            <Nav setCurrentTimeFrame={setCurrentTimeFrame} currentTimeFrame={currentTimeFrame} />
+            <Profile />
+            <Nav />
         </div>
     );
-}
-
-SideBar.propTypes = {
-    currentTimeFrame: PropTypes.oneOf(["daily", "weekly", "monthly"]).isRequired,
-    setCurrentTimeFrame: PropTypes.func.isRequired
 }
