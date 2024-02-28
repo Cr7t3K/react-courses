@@ -1,5 +1,6 @@
 import Item from "./Item.jsx";
 import datas from "../data.json"
+import PropTypes from "prop-types";
 
 export default function Content({ currentTimeFrame }) {
     return (
@@ -12,4 +13,8 @@ export default function Content({ currentTimeFrame }) {
             ))}
         </div>
     );
+}
+
+Content.propTypes = {
+    currentTimeFrame: PropTypes.oneOf(["daily", "weekly", "monthly"]).isRequired
 }

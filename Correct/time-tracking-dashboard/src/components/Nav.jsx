@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Nav({ setCurrentTimeFrame, currentTimeFrame }) {
 
     return (
@@ -16,4 +18,9 @@ export default function Nav({ setCurrentTimeFrame, currentTimeFrame }) {
             </button>
         </div>
     );
+}
+
+Nav.propTypes = {
+    currentTimeFrame: PropTypes.oneOf(["daily", "weekly", "monthly"]).isRequired,
+    setCurrentTimeFrame: PropTypes.func.isRequired
 }

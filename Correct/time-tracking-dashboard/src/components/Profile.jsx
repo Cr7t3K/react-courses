@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Profile({ firstName, lastName, avatar  }) {
     return (
         <div className="profile">
@@ -8,4 +10,10 @@ export default function Profile({ firstName, lastName, avatar  }) {
                 </div>
         </div>
     );
+}
+
+Profile.propTypes = {
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired
 }
