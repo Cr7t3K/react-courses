@@ -4,7 +4,7 @@ import Nav from "./Nav.jsx";
 export default function SideBar() {
     return (
         <div className="sidebar">
-            <Profile />
+            <Profile firstName="John" lastName="Doe" avatar="src/images/image-jeremy.png" />
             <Nav />
         </div>
     );
