@@ -1,12 +1,15 @@
 import './App.css'
 import SideBar from "./components/SideBar.jsx";
 import Content from "./components/Content.jsx";
+import {useState} from "react";
 
 export default function App() {
-  return (
+    const [currentTimeFrame, setCurrentTimeFrame] = useState("daily")
+
+    return (
       <>
-          <SideBar />
-          <Content />
+          <SideBar setCurrentTimeFrame={setCurrentTimeFrame} currentTimeFrame={currentTimeFrame} />
+          <Content currentTimeFrame={currentTimeFrame} />
       </>
-  );
+    );
 }
