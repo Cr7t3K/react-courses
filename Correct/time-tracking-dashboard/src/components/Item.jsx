@@ -2,7 +2,7 @@ import FavoriteIcon from "./FavoriteIcon.jsx";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function Item ({ title, timeframes, currenTimeFrame }) {
+export default function Item ({ title, timeframes, currentTimeFrame }) {
     const [isFavorite, setIsFavorite] = useState(false)
 
     return (
@@ -13,8 +13,8 @@ export default function Item ({ title, timeframes, currenTimeFrame }) {
                     <FavoriteIcon isFavorite={isFavorite} />
                 </button>
             </div>
-            <p className="time" id="workTime">{ timeframes[currenTimeFrame].current }</p>
-            <p className="previous" id="workPrevious">Last week - { timeframes[currenTimeFrame].previous }</p>
+            <p className="time" id="workTime">{ timeframes[currentTimeFrame].current }</p>
+            <p className="previous" id="workPrevious">Last week - { timeframes[currentTimeFrame].previous }</p>
         </div>
     );
 }

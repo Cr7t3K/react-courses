@@ -1,19 +1,15 @@
-import PropTypes from "prop-types";
+import { useTimeTrackingContext } from "../contexts/TimeTrackingContext.jsx";
 
-export default function Profile({ firstName, lastName, avatar  }) {
+export default function Profile() {
+    const { user } = useTimeTrackingContext()
+
     return (
         <div className="profile">
-            <img src={ avatar } alt="" className="" />
+            <img src={ user.avatar } alt="" className="" />
                 <div>
                     <p className="stats-text">Report for</p>
-                    <p className="name">{firstName} {lastName}</p>
+                    <p className="name">{user.firstName} {user.lastName}</p>
                 </div>
         </div>
     );
-}
-
-Profile.propTypes = {
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired
 }
